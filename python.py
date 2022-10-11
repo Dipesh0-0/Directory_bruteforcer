@@ -11,7 +11,11 @@ def getUserArguments():
 	return options
 
 options = getUserArguments()
-file = open(options.file)
+if not options.file:
+	file=open(wordlist.txt)
+
+else:
+  file = open(options.file)
 u = options.url
 
 for i in range(397):
